@@ -19,6 +19,7 @@ public class Regular {
         System.out.println(expression("+5(911)310-12-74"));
         System.out.println(expression("+7(9fg)125-42-99"));
         System.out.println(expression("+7(122)2342343"));
+        System.out.println(expression("+7(912)632-10-64 "));
 
 
     }
