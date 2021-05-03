@@ -2,8 +2,8 @@ package lesson2.example5;
 
 public class Transponirovanie {
     public static void main(String[] args) {
-        int n = (int)(3 + Math.random() * 3);
-        int m = (int)(3 + Math.random() * 3);
+        int n = (int) (3 + Math.random() * 3);
+        int m = (int) (3 + Math.random() * 3);
         System.out.println(n);
         System.out.println(m);
 
@@ -28,7 +28,7 @@ public class Transponirovanie {
         System.out.println();
 
         for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
+            for (int j = i + 1; j < n; j++) {
                 int temp = arr[i][j];
                 arr[i][j] = arr[j][i];
                 arr[j][i] = temp;
