@@ -18,7 +18,7 @@ public class FileHelperTest {
     @Test
     @DisplayName("Получение персон из листа Person1")
     void getPersonsFromSheetTest() throws ParseException {
-        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/homework_task/lesson11/persons.xlsx", "Persons1");
+        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/lesson11/task4/persons.xlsx", "Persons1");
 
         List<Person> expectedPersons = Arrays.asList(
                 new Person("Иванов", "Владимир", "Михайлович", fromString("14.01.1990"), new Passport("4510", "155442")),
@@ -39,7 +39,7 @@ public class FileHelperTest {
     @Test
     @DisplayName("Получение персон из листа Person2")
     void getPersonsFromSheet2Test() throws ParseException {
-        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/homework_task/lesson11/persons.xlsx", "Persons2");
+        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/lesson11/task4/persons.xlsx", "Persons2");
 
         List<Person> expectedPersons = Arrays.asList(
                 new Person("Иванов", "Владимир", "Михайлович", fromString("14.01.1990"), new Passport("4510", "155442")),
@@ -59,21 +59,21 @@ public class FileHelperTest {
     @Test
     @DisplayName("Получение персон из несуществующего листа")
     void getPersonFromWrongSheetTest() throws ParseException {
-        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/homework_task/lesson11/persons.xlsx", "PersonsNA");
+        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/lesson11/task4/persons.xlsx", "PersonsNA");
         Assertions.assertNull(persons);
     }
 
     @Test
     @DisplayName("Получение персон из несуществующего файла")
     void getPersonFromWrongFileTest() throws ParseException {
-        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/homework_task/lesson11/NA.xlsx", "PersonsNA");
+        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/lesson11/task4/NA.xlsx", "PersonsNA");
         Assertions.assertNull(persons);
     }
 
     @Test
     @DisplayName("Получение персон из листа = null")
     void getPersonFromNullSheetTest() throws ParseException {
-        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/homework_task/lesson11/persons.xlsx", null);
+        List<Person> persons = FileHelper.getPersonsFromExcel("src/main/java/lesson11/task4/persons.xlsx", null);
         Assertions.assertNull(persons);
     }
 
