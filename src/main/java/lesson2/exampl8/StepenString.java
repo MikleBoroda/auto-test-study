@@ -1,6 +1,6 @@
 package lesson2.exampl8;
 
-import com.sun.codemodel.internal.fmt.JStaticFile;
+
 
 public class StepenString {
     static String stepenReturn(int n) {
